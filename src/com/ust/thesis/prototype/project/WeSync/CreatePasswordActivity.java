@@ -29,6 +29,7 @@ import android.widget.Toast;
 public class CreatePasswordActivity extends Activity {
 	
     Button host;
+    int test;
    
 
     public void onCreate(Bundle savedInstanceState) {
