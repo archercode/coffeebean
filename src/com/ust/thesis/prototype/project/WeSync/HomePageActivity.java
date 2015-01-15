@@ -12,10 +12,14 @@ import android.widget.TextView;
 
 
 public class HomePageActivity extends Activity {
+	
+	private CWifiConnectivity cwificonnectivity;
+	
     public void onCreate(Bundle savedInstanceState) {
 
         Button create, join;
         
+        cwificonnectivity = new CWifiConnectivity(getBaseContext());
         
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -44,6 +48,8 @@ public class HomePageActivity extends Activity {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            	//Tonny
+            	cwificonnectivity.turnOnOffHotspot(true);
                 Intent createPass = new Intent(getApplicationContext(),
                         CreatePasswordActivity.class);
                 startActivity(createPass);
